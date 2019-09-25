@@ -1,20 +1,20 @@
-# boot-backend
-
+manageSys
+ 
 #### 项目介绍
-此项目源码采用前后端分离方式，spring boot开发后端，使用shiro进行权限控制,layui、bootstrap、jquery、html为前端,基于json进行交互,接口完全采用Restful的风格，实现按钮级权限控制，可以作为开发项目的脚手架，做为基础项目。
+后台管理系统，此项目源码采用前后端分离方式，spring boot开发后端，mybatis与数据库交互，使用shiro进行权限控制，layui、bootstrap、jquery、html为前端,基于json进行交互,接口完全采用Restful的风格，实现按钮级权限控制，可以作为开发项目的脚手架，做为基础项目。
 
 #### 环境要求
 1. jdk8、mysql、maven
 
 #### 初始化工作
-1. 运行数据库脚本，在/文档和sql/db/boot_backend.sql
+1. 运行数据库脚本，在/文档和sql/db/manageSys.sql
 2. 配置信息在application.yml里，数据库的用户名、密码、ip、端口等，根据情况修改一下
 
 #### 使用说明
 1. 安装运行文档在/文档和sql/01 安装运行.docx
-1. 右键运行启动类com.zw.admin.server.ServerApplication
-2. 访问http://localhost:8080，用户名和密码都是admin
-
+2. 右键运行启动类com.zw.admin.server.ServerApplication
+3. 访问http://localhost:8080，用户名和密码都是admin
+4. 参考项目boot_backend
 
 #### 参与贡献
 
