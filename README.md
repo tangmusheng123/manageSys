@@ -18,4 +18,4 @@
 
 #### 参与贡献
 
-1. 小威老师 xiaoweijiagou@163.com
+1. 小郭老师 tang_mu_sheng123@163.com
