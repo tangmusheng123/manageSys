@@ -38,7 +38,6 @@ public class LogoutFilter extends org.apache.shiro.web.filter.authc.LogoutFilter
 			boolean flag = super.preHandle(request, response);
 			log.debug("{}退出成功", user.getUsername());
 			SpringUtil.getBean(SysLogService.class).save(user.getId(), "退出", true, null);
-
 			return flag;
 		} else {
 			TokenManager tokenManager = SpringUtil.getBean(TokenManager.class);
@@ -49,14 +48,13 @@ public class LogoutFilter extends org.apache.shiro.web.filter.authc.LogoutFilter
 			} else {
 				RestfulFilter.writeResponse(WebUtils.toHttp(response), HttpStatus.BAD_REQUEST.value(), ERR_INFO);
 			}
-
 			SpringUtil.getBean(SysLogService.class).save(user.getId(), "token方式退出", flag, null);
-
 			return false;
 		}
 	}
 
 	private static String SUCCESS_INFO = JSONObject.toJSONString(new ResponseInfo(HttpStatus.OK.value() + "", "退出成功"));
+
 	private static String ERR_INFO = JSONObject
 			.toJSONString(new ResponseInfo(HttpStatus.BAD_REQUEST.value() + "", "退出失败,token不存在"));
 
